@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { Task } from "./Interfaces";
 
 import "./App.css";
+import Header from "./components/Header";
 
 const defaultFormData: Task = {
   task: "",
@@ -28,28 +29,12 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div className="header">
-        <form onSubmit={onSubmit}>
-          <div className="inputContainer">
-            <input
-              type="text"
-              id="task"
-              placeholder="Add new task"
-              value={task}
-              onChange={handleChange}
-            />
-            <input
-              type="number"
-              id="deadline"
-              placeholder="Add a deadline (in days)"
-              min={0}
-              value={deadline}
-              onChange={handleChange}
-            />
-          </div>
-          <button>Add task</button>
-        </form>
-      </div>
+      <Header
+        task={task}
+        deadline={deadline}
+        onSubmit={onSubmit}
+        handleChange={handleChange}
+      />
       <div className="todoList"></div>
     </div>
   );
