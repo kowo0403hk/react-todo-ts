@@ -3,6 +3,7 @@ import { Task } from "./Interfaces";
 
 import "./App.css";
 import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
 const defaultFormData: Task = {
   task: "",
@@ -10,6 +11,7 @@ const defaultFormData: Task = {
 };
 
 const App: FC = () => {
+  // state management at App level, but will pass down props to Header components
   const [formData, setFormData] = useState(defaultFormData);
   const { task, deadline } = formData;
   const [todoList, setTodoList] = useState<Task[]>([]); //an array that contains Task interface objects
@@ -35,7 +37,7 @@ const App: FC = () => {
         onSubmit={onSubmit}
         handleChange={handleChange}
       />
-      <div className="todoList"></div>
+      <TodoList todoList={todoList} />
     </div>
   );
 };
