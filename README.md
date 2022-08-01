@@ -1,5 +1,14 @@
 # A Todo Application written in TypeScript
 
+This project is for the purpose of practicing coding in TypeScript.
+
+Home:
+![Home](https://github.com/kowo0403hk/react-todo-ts/blob/master/docs/Todo%20-%20Home.png?raw=true)
+Added two tasks:
+![Added Task](https://github.com/kowo0403hk/react-todo-ts/blob/master/docs/Todo%20-%20Added%20Task.png?raw=true)
+Deleted one task:
+![Deleted Task](https://github.com/kowo0403hk/react-todo-ts/blob/master/docs/Todo%20-%20Deleted%20Task.png?raw=true)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
