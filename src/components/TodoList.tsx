@@ -1,16 +1,15 @@
 import { FC } from "react";
 import TodoTask from "./TodoTask";
-import { Task } from "../Interfaces";
+import { Task, TodoListProps } from "../Interfaces";
 
-interface TodoListProps {
-  todoList: Task[];
-}
-
-const TodoList: FC<TodoListProps> = ({ todoList }: TodoListProps) => {
+const TodoList: FC<TodoListProps> = ({
+  todoList,
+  completeTask,
+}: TodoListProps) => {
   return (
     <div className="todoList">
-      {todoList.map(() => {
-        return <TodoTask />;
+      {todoList.map((task: Task, key: number) => {
+        return <TodoTask key={key} task={task} completeTask={completeTask} />;
       })}
     </div>
   );

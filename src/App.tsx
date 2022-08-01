@@ -29,6 +29,14 @@ const App: FC = () => {
     setFormData(defaultFormData);
   };
 
+  const completeTask = (taskToDelete: string): void => {
+    setTodoList(
+      todoList.filter((task) => {
+        return task.task !== taskToDelete; // keep only the tasks which does not equal to the taskTo Delete
+      })
+    );
+  };
+
   return (
     <div className="App">
       <Header
@@ -37,7 +45,7 @@ const App: FC = () => {
         onSubmit={onSubmit}
         handleChange={handleChange}
       />
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} completeTask={completeTask} />
     </div>
   );
 };

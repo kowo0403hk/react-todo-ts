@@ -86,16 +86,16 @@ form {
   height: 100%;
   font-size: 18px;
   border-right: none;
-  background-color: tomato;
+  background-color: rgb(63, 116, 197);
 }
 
 .task button {
   flex: 20%;
   height: 100%;
   border: none;
-  background-color: lightseagreen;
+  background-color: rgb(248, 224, 30);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  color: white;
+  color: black;
   cursor: pointer;
 }
